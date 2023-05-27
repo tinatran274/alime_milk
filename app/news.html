@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Thư viện Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <!--Nhúng file css-->
+    <link rel="stylesheet" href="./css/news.css">
+    <!--Tên trang-->
+    <title>Trang Chủ</title>
+</head>
+<body>
+  <!--Thư viện icon-->
+    <script src="https://kit.fontawesome.com/c3ef565b0b.js" crossorigin="anonymous"></script>
+    <!--Nhúng file javascript-->
+    <script src="./js/news.js" type="module">
+      
+    </script>
+    <!--Bắt đầu code-->
+    <!--Phần header-->
+    <div class="header">
+        <div class="tools">
+            <img class="tools__logo" src="./img/img_logo1.png" alt="logo">
+            <div class="tools__tool">
+                <img class="notify" src="./img/img_notify.png" alt="notify">
+                <img class="message" src="./img/img_mess.png" alt="message">
+                <img class="login" id="log" src="./img/img_login.png" alt="">
+            </div>
+        </div>
+        <!--Navigation Bar-->
+        <div class="topnav" id="myTopnav">
+            <a href="main.html">Trang Chủ</a>
+            <div class="dropdown">
+              <button class="dropbtn">Tin Tức
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="news.html">Bảng tin</a>
+                <a href="notify.html">Thông báo</a>
+                <a href="event.html">Sự kiện</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Thư viện
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="regulation.html">Quy Chế</a>
+                  <a href="rule.html">Quy định</a>
+                  <a href="form.html">Biểu mẫu</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Nhân Viên
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="employee.html">Cá nhân</a>
+                  <a href="meeting.html">Lịch phòng họp</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Về chúng tôi
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="about_us.html">Câu Chuyện AlimeMilk</a>
+                  <a href="organization.html">Cơ Cấu Tổ Chức</a>
+                </div>
+              </div>
+            <a href="contact.html">Liên Hệ</a>
+          </div>
+        </div> 
+    </div>
+    <!--Phần main-->
+    <div class="main">
+        <div class="duong_dan">
+            <h4>Tin tức > Bảng tin</h4>
+        </div>
+        <h2>BẢNG TIN</h2>
+        <!--Start phần Quản lý bang tin--> 
+        <div id="manage_news">
+          <img id="add" src="./img/img_add.png" alt="add">
+          <img id="update" src="./img/img_update.png" alt="update">
+          <img id="delete" id="log" src="./img/img_delete.png" alt="delete">
+          <div class="edit" id="edit">
+            <div class="edit_item" id="edit_item_name">
+              <span>Nhập tên tin tức: </span><input id="e_name" type="text" required>
+            </div>
+            <div class="edit_item" id="edit_item_content">
+              <span>Nhập nội dung: </span><input id="e_content" type="text" required>
+            </div>
+            <button id="search">Tìm kiếm</button>
+            <button id="confirm_add">Thêm</button>
+            <button id="confirm_update">Cập nhật</button>
+            <button id="confirm_delete">Xóa</button>
+            <button id="cancel">Hủy bỏ</button>
+          </div>
+        </div>
+        <!--End phần Quản lý bang tin--> 
+        <div class="su_kien" id="su_kien">
+      </div>
+    </div>
+    <!--Phần footer-->  
+    <div class="footer">
+      <div class="muc">
+        <a href="main.html">Trang chủ</a>
+        <a href="news.html">Tin tức</a>
+        <a href="organization.html">Cơ cấu tổ chức</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="about_us.html">Câu chuyện AlimeMilk</a>
+      </div>
+      <div class="lien_he">
+        <p>Hotline: 1900 784 839</p>
+        <p>Trụ sở chính: 65 Đường Lý Thường Kiệt, Phường 15, Quận 10, Thành phố Hồ Chí Minh, Vietnam </p>
+        <p>Email: alimemilk@am.com.vn  </p>
+          
+      </div>
+      <div class="ket_noi">
+        <p>Kết nối với Alime Milk tại </p>
+        <div class="mang_xa_hoi">
+          <img src="./img/img_fb.png">
+          <img src="./img/img_ig.png">
+          <img src="./img/img_tt.png">
+        </div>
+        <div class="tai_ve">
+          <img src="./img/img_appstore.png">
+          <img src="./img/img_chplay.png">
+        </div>
+      </div>
+    </div>
+</body>
+</html>

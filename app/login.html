@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Thư viện Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <!--Nhúng file css-->
+    <link rel="stylesheet" href="./css/login.css">
+    <!--Tên trang-->
+    <title>Đăng Nhập</title>
+</head>
+<body>
+    <!--Thư viện icon-->
+    <script src="https://kit.fontawesome.com/c3ef565b0b.js" crossorigin="anonymous"></script>
+    <!--Nhúng file javascript-->
+    <script src="./js/login.js" type="module"></script>
+    <!--Bắt đầu code-->
+    
+    <div class="form">
+    <div class="imgcontainer">
+        <img class="logo" src="./img/img_logo1.png" alt="logo">
+    </div>
+    
+      <div class="container">
+        <label for="email"><b>Username</b></label>
+        <input id="email" type="text" placeholder="Enter Email" required>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <input id="password" type="password" placeholder="Enter Password" required>
+        <button id="login" type="submit">Login</button>
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn" id="cancel">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </div>
+</body>
+</html>

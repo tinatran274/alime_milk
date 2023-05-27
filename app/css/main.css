@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto 300", sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+:root{
+    --blue_main: #19376D;
+    --red_deco: #D21312;
+}
+
+.tools__logo{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100px;
+}
+.tools .tools__tool img{
+    width: 25px;
+}
+.tools__tool{
+    right: 50px;
+    top: 25px;
+    width: 130px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tools{
+    position: relative;
+}
+.tools input[type=text] {
+    position: absolute;
+    border-radius: 20px;
+    border-color: #cac4c4;
+    top: 20px;
+    left: 150px;
+    padding: 6px;
+    font-size: 15px;
+  }
+.topnav {
+    background-color: var(--blue_main);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--red_deco);
+    color: white;
+  }
+  
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: var(--red_deco);
+    color: black;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .main{
+    margin-bottom: 40px;
+  }
+  #greeting{
+    margin: 30px 0 10px 30px;
+    color: var(--blue_main);
+  }
+  #greeting:hover{
+    color: var(--red_deco);
+  }
+  #birthday{
+    display: none;
+  }
+  #cheer{
+    margin: 20px 30px;
+    color: var(--red_deco);
+    font-size: larger;
+  }
+  
+  /* Column container */
+.tintuc {  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+ .tintuc__thongbao {
+    flex: 20%;
+    margin: 20px 15px;
+    max-height: 500px;
+    overflow: scroll;
+    background-color: #f2f7f9;
+    padding: 20px;
+  }
+  .tintuc__thongbao .title{
+    color: var(--blue_main);
+    margin-bottom: 20px;
+  }
+  .tintuc__thongbao a{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .tintuc__slide {   
+    flex: 70%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.tin_noi_bat{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}  
+.bai_viet{
+    max-width: 290px;
+    max-height: 380px;
+    overflow: hidden;
+    margin: 20px 12px;
+}
+.bai_viet img{
+  margin: 20px 0 0 0;
+}
+.bai_viet img:hover {opacity: 0.7;}
+.bai_viet h4:hover {color: var(--red_deco);}
+.main h3{
+    color: var(--blue_main);
+    margin: 0 20px;
+}
+.su_kien{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.deco{
+    width: 100%;
+    height: 1px;
+    margin: 30px 20px;
+    background-color: #f3f4f5;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: var(--blue_main);
+    height: 300px;
+}
+.footer .muc{
+    display: flex;
+    margin: 55px 0;
+    flex-direction: column;
+}
+.footer .muc a{
+    color: white;
+    margin: 7px 0;
+}
+.footer .lien_he{
+    width: 400px;
+    display: flex;
+    margin: 65px 0;
+    flex-direction: column;
+}
+.footer .lien_he p{
+    color: white;
+    margin: 7px 0;
+}
+.footer .ket_noi{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+.footer .ket_noi p{
+    color: white;
+    margin: 0 30px;
+}
+.footer .mang_xa_hoi{
+    display: flex;
+    width: 150px;
+    margin: 35px 40px;
+    justify-content: space-between;
+}
+.footer .mang_xa_hoi img{
+    width: 30px;
+}
+.footer .tai_ve img{
+    width: 150px;
+}
+  
+

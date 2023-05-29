@@ -126,179 +126,59 @@ img{
   .main{
     margin-bottom: 40px;
   }
-  #greeting{
-    margin: 30px 0 10px 30px;
-    color: var(--blue_main);
-  }
-  #greeting:hover{
-    color: var(--red_deco);
-  }
-  #birthday{
-    display: none;
-  }
-  #cheer{
+  .duong_dan h4{
     margin: 20px 30px;
-    color: var(--red_deco);
-    font-size: larger;
-  }
-  
-  /* Column container */
-.tintuc {  
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
- .tintuc__thongbao {
-    flex: 20%;
-    margin: 20px 15px;
-    max-height: 500px;
-    overflow: scroll;
-    background-color: #f2f7f9;
-    padding: 20px;
-  }
-  .tintuc__thongbao .title{
+    font-weight: 20px;
     color: var(--blue_main);
-    margin-bottom: 20px;
   }
-  .notify {
-    list-style: none;
-
+  .main h2{
+    margin: 40px 30px;
   }
-  .notify_item a{
-    display: block;
-    font-size: 15px;
-    margin-bottom: 15px;
-    color:#3d63a9;
-  }
-
-  .tintuc__slide {   
-    flex: 70%;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-  }
-
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-.tin_noi_bat{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-}  
-.bai_viet{
-    max-width: 290px;
-    max-height: 380px;
-    overflow: hidden;
-    margin: 20px 12px;
-}
-.bai_viet img{
-  margin: 20px 0 0 0;
-}
-.bai_viet img:hover {opacity: 0.7;}
-.bai_viet h4:hover {color: var(--red_deco);}
-.main h3{
-    color: var(--blue_main);
-    margin: 0 20px;
-}
-.su_kien{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-.deco{
-    width: 100%;
-    height: 1px;
+#add{
+    background-color: var(--blue_main);
+    border-radius: 5px;
+    border: none;
     margin: 30px 20px;
-    background-color: #f3f4f5;
-}
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  #add:hover{
+    background-color: #c4d1ea;
+    color: rgb(16, 15, 15);
+  }
 
-.footer{
+  .add_process{
+    margin: 40px 70px;
+  }
+  input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .edit_item span{
+    font-size: 13px;
+    color: #19376D;
+  }
+  .add_process button{
+    background-color: var(--blue_main);
+    border-radius: 5px;
+    border: none;
+    margin: 30px 20px;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  .edit button:hover{
+    background-color: #0a2049;
+  }
+  #e_content{
+    min-height: 200px;
+  }
+  .footer{
     display: flex;
     justify-content: space-around;
     flex-direction: row;

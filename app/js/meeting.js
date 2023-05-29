@@ -123,7 +123,8 @@ function manageMeeting(uid) {
     cancel.style.display="block"; 
     confirm_add.style.display="block"; 
     confirm_update.style.display="none"; 
-    confirm_delete.style.display="none"; 
+    confirm_delete.style.display="none";
+    consol.style.display="none"
 
     var selectedName="none";
     var selectedTime="none";
@@ -143,10 +144,9 @@ function manageMeeting(uid) {
     cancel.addEventListener("click", function(){
       edit.style.display="none";
     });
-    if(selectedName!="none" && selectedTime!="none"){
-      
-      confirm_add.addEventListener("click", async function(){
-        const currentDate=new Date();
+    confirm_add.addEventListener("click", async function(){
+      const currentDate=new Date();
+      if(selectedName!="none" && selectedTime!="none"){
         const docRef = await addDoc(collection(db, "meeting"), {
           name: selectedName,
           date: currentDate.toString().slice(0,15),
@@ -154,8 +154,8 @@ function manageMeeting(uid) {
           emp: uid,
         });
         location.reload();
-      });
-    }
+      }
+    });
   });
 
   document.getElementById("delete").addEventListener("click", function(){
@@ -169,6 +169,7 @@ function manageMeeting(uid) {
     confirm_update.style.display="none"; 
     confirm_delete.style.display="block"; 
     consol.innerText="Bạn có chắc là muốn hóa hết lịch đặt phòng hôm nay của bạn?";
+    consol.style.display="block"
     
     cancel.addEventListener("click", function(){
       edit.style.display="none";

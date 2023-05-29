@@ -30,18 +30,14 @@ onAuthStateChanged(auth, async (user) => {
     if (docSnap.exists()) {
       const employee = docSnap.data();
       console.log(employee.toString()); 
-      document.getElementById("greeting").innerHTML = "Xin chào, "+employee.getRename();   
       const logout = document.getElementById("log");
       logout.src = './img/img_logout.png';
       logout.addEventListener("click", logoutEmail);
-
-      const currentDate=new Date();
-      const userDate=new Date(employee.getAge());
-      console.log(currentDate.getDate()+ " " + currentDate.getMonth()+" +  "+userDate.getDate()+" "+userDate.getMonth());
-      if(currentDate.getMonth()==userDate.getMonth() && currentDate.getDate()==userDate.getDate()){
-        document.getElementById("cheer").innerHTML="Hôm nay là "+currentDate+". Chúc mừng sinh nhật "+employee.getRename();
-        document.getElementById("birthday").style.display="block";
-      }
+    
+      /* Start phần Xử lý yêu cầu liên đơn vị */
+      processRole(employee, uid);
+      /* End phần Xử lý yêu cầu liên đơn vị */
+      
 
     } else {
       console.log("No such document!");
@@ -51,28 +47,8 @@ onAuthStateChanged(auth, async (user) => {
     const logout = document.getElementById("log");
     logout.addEventListener("click", loginEmail);
   }
-  const querySnapshot = await getDocs(collection(db, "notify").withConverter(notifyConverter));
-  querySnapshot.forEach(async (doc) => {
-      const notify = doc.data(); 
-      createItemNotify(notify);
-      console.log(doc.id, " => ", notify.getReName());
-
-  });
 });
 //Xử lý
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
 
 function movePage(url) {
   window.location.href = url;
@@ -89,16 +65,10 @@ function logoutEmail() {
 function loginEmail() {
   movePage("login.html");
 }
-function createItemNotify(notify) {
-  const node = document.createElement("li");
-  const name = document.createElement("a");
 
-  node.className="notify_item";
-  name.innerText=notify.getReName();
-  name.href="notify.html";
-
-  node.appendChild(name);
-
-  document.getElementById("notify").appendChild(node);
-  console.log(node);
-}
+function processRole(employee, uid) {
+    if(employee.getRole()=="Top" || employee.getRole()=="Middle"){
+      document.getElementById("manage_process").style.display="block";
+      //manageMeeting(uid);
+    }
+  }

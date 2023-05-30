@@ -62,19 +62,13 @@ img{
     text-decoration: none;
     font-size: 15px;
   }
-  
-  /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
   }
-  
-  /* Dropdown container - needed to position the dropdown content */
   .dropdown {
     float: left;
     overflow: hidden;
   }
-  
-  /* Style the dropdown button to fit inside the topnav */
   .dropdown .dropbtn {
     font-size: 15px;
     border: none;
@@ -85,8 +79,6 @@ img{
     font-family: inherit;
     margin: 0;
   }
-  
-  /* Style the dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -95,8 +87,6 @@ img{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
-  /* Style the links inside the dropdown */
   .dropdown-content a {
     float: none;
     color: black;
@@ -105,24 +95,19 @@ img{
     display: block;
     text-align: left;
   }
-  
-  /* Add a dark background on topnav links and the dropdown button on hover */
+
   .topnav a:hover, .dropdown:hover .dropbtn {
     background-color: var(--red_deco);
     color: white;
   }
-  
-  /* Add a grey background to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: var(--red_deco);
     color: black;
   }
-  
-  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+   /* End phan header*/
   .main{
     margin-bottom: 40px;
   }
@@ -134,22 +119,24 @@ img{
   .main h2{
     margin: 40px 30px;
   }
-#add{
-    background-color: var(--blue_main);
-    border-radius: 5px;
+  .manage_process{
+    margin: 90px 60px;
+  }
+  .manage_process button{
+    background-color: var(--red_deco);
     border: none;
-    margin: 30px 20px;
     color: white;
     padding: 12px 20px;
     cursor: pointer;
   }
-  #add:hover{
-    background-color: #c4d1ea;
-    color: rgb(16, 15, 15);
+  .manage_process button:hover{
+    background-color: var(--blue_main);
   }
 
+   /* start phan them yeu cau */
   .add_process{
     margin: 40px 70px;
+    display: none;
   }
   input[type=text]{
     width: 100%;
@@ -172,12 +159,53 @@ img{
     padding: 12px 20px;
     cursor: pointer;
   }
-  .edit button:hover{
+  .add_process button:hover{
     background-color: #0a2049;
+  }
+  #found_user{
+    margin: 0 0 40px 0;
+    color: #19376D;
+    font-style: italic;
+    display: none;
   }
   #e_content{
     min-height: 200px;
   }
+/* end phan them yeu cau */
+
+/* start phan xem yeu cau da gui */
+.sent_process{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 50px;
+ }
+ .sent_left{
+  list-style: none;
+ }
+ .sent_left .sent_item{
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  width: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #d8dbe0;
+ }
+ .sent_left .sent_item:hover{
+  background-color: white;
+ }
+ .sent_item .receiver_name{
+    margin: 0 0 5px 0;
+ }
+
+ .sent_item .time{
+    color:#3f67b1;
+    font-size: smaller;
+ }
+ 
+
+/* end phan xem yeu cau da gui */
+
+/* start footer */
   .footer{
     display: flex;
     justify-content: space-around;

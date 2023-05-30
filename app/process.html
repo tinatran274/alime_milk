@@ -85,21 +85,36 @@
         <h2>XỬ LÝ YÊU CẦU LIÊN ĐƠN VỊ</h2>
         <div class="manage_process" id="manage_process">
             <button id="add">Thêm yêu cầu</button>
+            <button id="sent">Yêu cầu đã gửi</button>
+            <button id="received">Nhận yêu cầu</button>
         </div>
-        <div class="add_process">
+        <div class="add_process" id="add_process">
             <div class="edit_item" id="edit_item_recipient">
                 <span>Người nhận: </span><input id="e_recipient" type="text" required>
               </div>
+              <p id="found_user"></p>
               <div class="edit_item" id="edit_item_title">
                 <span>Nhập chủ đề: </span><input id="e_title" type="text" required>
               </div>
               <div class="edit_item" id="edit_item_content">
                 <span>Nhập nội dung: </span><input id="e_content" type="text" required>
               </div>
+              <button id="search">Tìm kiếm</button>
               <button id="send">Gửi</button>
               <button id="cancel">Hủy bỏ</button>
-
         </div>
+        <div class="sent_process" id="sent_process">
+          <ul class="sent_left" id="sent_left">
+          </ul>
+          <div class="sent_right" id="sent_right">
+            <p id="receiver"></p>
+            <p id="time"></p>
+            <h3 id="title"></h3>
+            <p id="content"></p>
+          </div>
+      </div>
+
+
     </div>
     <!--Phần footer-->  
     <div class="footer">

@@ -26,7 +26,7 @@ function movePage(url) {
 }
 
 function inNotLoginPage() {
-  movePage("main.html");
+  movePage("index.html");
 }
 
 function loginEmail() {

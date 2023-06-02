@@ -39,7 +39,7 @@ onAuthStateChanged(auth, async (user) => {
       const userDate=new Date(employee.getAge());
       console.log(currentDate.getDate()+ " " + currentDate.getMonth()+" +  "+userDate.getDate()+" "+userDate.getMonth());
       if(currentDate.getMonth()==userDate.getMonth() && currentDate.getDate()==userDate.getDate()){
-        document.getElementById("cheer").innerHTML="Hôm nay là "+currentDate+". Chúc mừng sinh nhật "+employee.getRename();
+        document.getElementById("cheer").innerHTML="Hôm nay là "+currentDate.toString().slice(0,15)+". Chúc mừng sinh nhật "+employee.getRename();
         document.getElementById("birthday").style.display="block";
       }
 

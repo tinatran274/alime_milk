@@ -93,6 +93,7 @@ function setUserInfo(employee, uid) {
   document.getElementById("phone").innerHTML="3. Số điện thoại: "+employee.getPhone();
   document.getElementById("address").innerHTML="4. Địa chỉ: "+employee.getAddress();
   document.getElementById("role").innerHTML="5. Chức vụ: "+employee.getRole();
+  document.getElementById("unit").innerHTML="6. Đơn vị làm việc: "+employee.getUnit();
 
 }
 

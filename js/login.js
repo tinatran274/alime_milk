@@ -39,7 +39,7 @@ function loginEmail() {
     const user = userCredential.user;
     console.log(user);
     alert("Đăng nhập thành công");
-    movePage("main.html");
+    movePage("index.html");
   })
   .catch((error) => {
     const errorCode = error.code;

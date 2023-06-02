@@ -179,6 +179,7 @@ img{
   flex-direction: row;
   justify-content: space-between;
   margin: 0 50px;
+  display: none;
  }
  .sent_left{
   list-style: none;
@@ -196,12 +197,13 @@ img{
  .sent_item .receiver_name{
     margin: 0 0 5px 0;
  }
-
  .sent_item .time{
     color:#3f67b1;
     font-size: smaller;
  }
- 
+ .sent_right{
+  width: 400px;
+ }
 
 /* end phan xem yeu cau da gui */
 

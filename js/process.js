@@ -152,7 +152,7 @@ function processRole(employee, uid) {
     const time = document.createElement("p");
 
     node.className="sent_item";
-    receiver.innerText="Người gửi: "+sending.getRecipientName();
+    receiver.innerText="Người nhận: "+sending.getRecipientName();
     receiver.className="receiver_name";
     //title.onclick=getContent;
     title.innerText=sending.getTitle();
